@@ -1,0 +1,12 @@
+[Unit]
+Description=Tanner Website hosted on Port 300 npm node server
+After=network.target iptables.service firewalld.service ip6table.service ipset.service nginx.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/sbin/python3 /home/ubuntu/cs422-project2/Chapter-7/photogallery/app.py
+ExecStop=kill $(pgrep -f "python3 app.py")
+
+[Install]
+WantedBy=multi-user.target
