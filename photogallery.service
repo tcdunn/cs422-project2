@@ -5,7 +5,7 @@ After=network.target iptables.service firewalld.service ip6table.service ipset.s
 [Service]
 Type=simple
 User=root
-ExecStart=/usr/sbin/python3 /home/ubuntu/cs422-project2/Chapter-7/photogallery/app.py
+ExecStart=/usr/sbin/python3 /home/ubuntu/Chapter-7/photogallery/app.py
 ExecStop=kill $(pgrep -f "python3 app.py")
 
 [Install]
