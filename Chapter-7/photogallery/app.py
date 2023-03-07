@@ -48,7 +48,7 @@ dynamodb = boto3.resource('dynamodb', aws_access_key_id=AWS_ACCESS_KEY,
                             aws_secret_access_key=app.secret_key,
                             region_name=REGION)
 
-table = dynamodb.Table('PhotoGallery')
+table = dynamodb.Table('422x-project2a-dynamodb')
 
 
 def allowed_file(filename):
